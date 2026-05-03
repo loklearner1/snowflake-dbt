@@ -1,5 +1,5 @@
 with station as (
-    select START_STATION_NAME as station_name,
+    select distinct START_STATION_NAME as station_name,
     START_STATIO_ID as station_id,
     START_LAT as station_latitude,
     START_LNG as station_longitude
