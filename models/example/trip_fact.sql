@@ -6,6 +6,5 @@ with trips as (
     TIMESTAMPDIFF(SECOND, TO_TIMESTAMP(STARTED_AT), TO_TIMESTAMP(ENDED_AT)) as TRIP_DURATION_SECONDS
     from {{ source('demo', 'bike') }}
     where RIDE_ID != 'ride_id'
-    limit 10
 )
 select * from trips
